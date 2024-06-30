@@ -1,8 +1,12 @@
 // module sccafolding
-const Handler = {};
+const handler = {};
 
-Handler.SampleHandler = () => {
-    console.log("sampleHandler.handle()");
+handler.sampleHandler = (requestProperties, callback) => {
+
+    callback(200,{
+        "message": "Hello World"
+    });
+    //console.log("sampleHandler.handle()");
 };
 
-module.exports.sampleHandler;
+module.exports = handler;

@@ -1,8 +1,10 @@
 // module sccafolding
-const Handler = {};
+const handler = {};
 
-Handler.notFoundHandler = () => {
-    console.log("404 Not Found");
+handler.notFoundHandler = (requestProperties, callback) => {
+    callback(404, {
+        "message": "Not Found"
+    })
 };
 
-module.exports.notFoundHandler;
+module.exports = handler;
