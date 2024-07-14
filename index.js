@@ -7,11 +7,9 @@ const data = require('./lib/data');
 
 // app object - model scaffolding
 const app = {};
-data.create('text','newFile',{name:'Bangladesh'},(err)=>{
-    if(!err){
-        console.log('data saved');
-    }
-})
+data.update('text','newFile',{name:'england'},(err)=>{
+    console.log(err,data);
+});
 
 //create server 
 app.createServer = () => {
